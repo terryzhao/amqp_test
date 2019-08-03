@@ -1,5 +1,5 @@
 [package]
-name = "apitest"
+name = "amqp_test"
 version = "0.1.0"
 authors = ["Terry Zhao <terryzhao1981@gmail.com>"]
 edition = "2018"

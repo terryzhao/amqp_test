@@ -54,8 +54,16 @@ fn main() {
                 let header = headers.to_owned().headers.unwrap();
 //                println!("{:?}", header);
                 let queue = header.get("queue").unwrap();
-                queue.length();
-                println!("{}", queue);
+                let name: String = match queue {
+                    LongString(val) => {
+                        val.to_string()
+                    }
+                    _ => {
+                        "test_queue".to_string()
+                    }
+                };
+
+                println!("{}", name);
                 println!("consumer.created");
             }
 
